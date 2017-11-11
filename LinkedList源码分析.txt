@@ -1,0 +1,60 @@
+/**
+     * 链接使e作为第一个元素。
+     */
+    private void linkFirst(E e)
+ 
+/**
+     * 链接使e作为最后一个元素。
+     */
+    void linkLast(E e) 
+
+/**
+     *返回此列表中指定元素的第一次出现的索引，
+	 *此列表中指定元素的首次出现的索引，如果此列表不包含此元素，则为-1 
+     */
+    public int indexOf(Object o) 
+
+   /**
+     * 判断索引是否存在（index >= 0 && index < size时才存在）
+     */
+    private boolean isElementIndex(int index) {  
+
+   
+   private void checkElementIndex(int index) {
+        //isElementIndex(int index)方法：判断索引是否存在（index >= 0 && index < size时才存在）
+		if (!isElementIndex(index))
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+    }
+
+    /**
+     * 迭代器或添加操作时判断索引是否存在
+     */
+    private boolean isPositionIndex(int index)
+
+    /**
+     * 以正确的顺序（从第一个到最后一个元素）返回一个包含此列表中所有元素的数组
+     *返回的数组将是“安全的”，因为该列表不保留对它的引用。 
+	 *（换句话说，这个方法必须分配一个新的数组）。 因此，调用者可以自由地修改返回的数组。 
+     *此方法充当基于阵列和基于集合的API之间的桥梁。
+	 */
+    public Object[] toArray() {
+
+    /**
+     * 返回指定元素索引处的（非null）节点。
+     */
+    Node<E> node(int index) {
+
+private static class Node<E> {
+        //当前元素
+		E item;
+		//下一个元素
+        Node<E> next;
+		//上一个元素
+        Node<E> prev;
+        //构造方法
+        Node(Node<E> prev, E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
