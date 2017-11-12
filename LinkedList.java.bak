@@ -229,7 +229,7 @@ public class LinkedList<E>
      * 如果此列表包含指定的元素，则返回true 。
      */
     public boolean contains(Object o) {
-		//indexOf()方法：返回此列表中指定元素的首次出现的索引，如果此列表不包含此元素，则为-1 
+		//indexOf()方法：此列表中指定元素的首次出现的索引，如果此列表不包含此元素，则为-1 
         return indexOf(o) != -1;
     }
 

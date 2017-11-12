@@ -1,0 +1,4 @@
+Arrays.copyOf功能是实现数组的复制，返回复制后的数组。参数是被复制的数组和复制的长度
+public Object[] toArray() {
+        return Arrays.copyOf(elementData, size);
+    }
