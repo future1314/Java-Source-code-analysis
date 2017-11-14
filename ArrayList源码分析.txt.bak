@@ -1,6 +1,6 @@
 专题一、ArrayList增删操作技术细节详解 - aoguren - 博客园  http://www.cnblogs.com/aoguren/p/4765439.html
 扩容
-大量使用了arraycopy()，所以有必要把arraycopy()在 开头好好提一下（附带提一下copyOf）
+大量使用了arraycopy()，所以有必要把arraycopy()在 开头好好提一下
 System.arraycopy用法 - 天空的日志 - 网易博客  http://qinheng053.blog.163.com/blog/static/873451120123921645688/
 System.arraycopy(src, srcPos, dest, destPos, length)
 src:源数组; srcPos:源数组要复制的起始位置;

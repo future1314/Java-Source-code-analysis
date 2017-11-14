@@ -942,6 +942,7 @@ public class ArrayList<E> extends AbstractList<E>
         }
     }
 
+//
     @Override
     public void forEach(Consumer<? super E> action) {
         Objects.requireNonNull(action);
@@ -1150,7 +1151,7 @@ public class ArrayList<E> extends AbstractList<E>
         }
         modCount++;
     }
-
+//使用提供的 Comparator对此列表进行排序，以比较元素。 只有实现Comparator接口的数据类型才可以
     @Override
     @SuppressWarnings("unchecked")
     public void sort(Comparator<? super E> c) {
