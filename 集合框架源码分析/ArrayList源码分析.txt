@@ -1,0 +1,72 @@
+专题一、ArrayList增删操作技术细节详解 - aoguren - 博客园  http://www.cnblogs.com/aoguren/p/4765439.html
+扩容
+大量使用了arraycopy()，所以有必要把arraycopy()在 开头好好提一下（附带提一下copyOf）
+System.arraycopy用法 - 天空的日志 - 网易博客  http://qinheng053.blog.163.com/blog/static/873451120123921645688/
+System.arraycopy(src, srcPos, dest, destPos, length)
+src:源数组; srcPos:源数组要复制的起始位置;
+dest:目的数组; destPos:目的数组放置的起始位置; 
+length:复制的长度.
+Arrays.copyOf功能是实现数组的复制，返回复制后的数组。参数是被复制的数组和复制的长度
+public Object[] toArray() {
+        return Arrays.copyOf(elementData, size);
+    }
+
+	
+	/**
+     * ArrayList扩容的核心方法。
+     */
+    private void grow(int minCapacity) {
+        // oldCapacity为旧容量，newCapacity为新容量
+        int oldCapacity = elementData.length;
+		//将oldCapacity 右移一位，其效果相当于oldCapacity /2，
+		//我们知道位运算的速度远远快于整除运算，整句运算式的结果就是将新容量更新为旧容量的1.5倍，
+        int newCapacity = oldCapacity + (oldCapacity >> 1);
+		//然后检查新容量是否大于最小需要容量，若还是小于最小需要容量，那么就把最小需要容量当作数组的新容量，
+        if (newCapacity - minCapacity < 0)
+            newCapacity = minCapacity;
+		//再检查新容量是否超出了ArrayList所定义的最大容量，
+		//若超出了，则调用hugeCapacity()来比较minCapacity和 MAX_ARRAY_SIZE，
+		//如果minCapacity大于最大容量，则新容量则为ArrayList定义的最大容量，否则，新容量大小则为 minCapacity。 
+        if (newCapacity - MAX_ARRAY_SIZE > 0)
+            newCapacity = hugeCapacity(minCapacity);
+        // minCapacity is usually close to size, so this is a win:
+        elementData = Arrays.copyOf(elementData, newCapacity);
+    }
+	
+	arraycopy
+	    /**
+     * 在此列表中的指定位置插入指定的元素。 
+	 *先调用 rangeCheckForAdd 对index进行界限检查；然后调用 ensureCapacityInternal 方法保证capacity足够大；
+     *再将从index开始之后的所有成员后移一个位置；将element插入index位置；最后size加1。
+     */
+    public void add(int index, E element) {
+        rangeCheckForAdd(index);
+
+        ensureCapacityInternal(size + 1);  // Increments modCount!!
+		//arraycopy()这个实现数组之间复制的方法一定要看一下，下面就用到了arraycopy()方法实现数组自己复制自己
+        System.arraycopy(elementData, index, elementData, index + 1,
+                         size - index);
+        elementData[index] = element;
+        size++;
+    }
+	copyOf
+	    /**
+     * ArrayList扩容的核心方法。
+     */
+    private void grow(int minCapacity) {
+        // oldCapacity为旧容量，newCapacity为新容量
+        int oldCapacity = elementData.length;
+		//将oldCapacity 右移一位，其效果相当于oldCapacity /2，
+		//我们知道位运算的速度远远快于整除运算，整句运算式的结果就是将新容量更新为旧容量的1.5倍，
+        int newCapacity = oldCapacity + (oldCapacity >> 1);
+		//然后检查新容量是否大于最小需要容量，若还是小于最小需要容量，那么就把最小需要容量当作数组的新容量，
+        if (newCapacity - minCapacity < 0)
+            newCapacity = minCapacity;
+		//再检查新容量是否超出了ArrayList所定义的最大容量，
+		//若超出了，则调用hugeCapacity()来比较minCapacity和 MAX_ARRAY_SIZE，
+		//如果minCapacity大于最大容量，则新容量则为ArrayList定义的最大容量，否则，新容量大小则为 minCapacity。 
+        if (newCapacity - MAX_ARRAY_SIZE > 0)
+            newCapacity = hugeCapacity(minCapacity);
+        // minCapacity is usually close to size, so this is a win:
+        elementData = Arrays.copyOf(elementData, newCapacity);
+    }
