@@ -1,0 +1,9 @@
+Arrays工具类常用方法测试
+读 Java Arrays 源码 笔记 http://www.jianshu.com/p/d083332c3c29
+    1，排序 sort
+    2，查找 binarySearch()
+    3，比较 equals
+    4，填充 fill
+    5，转列表 asList()
+    6，哈希 Hash()
+    7，转字符串 toString()
