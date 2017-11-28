@@ -82,6 +82,14 @@ public class StringDemo {
 	}
 
 	/**
+	 * 删除首部和尾部空格
+	 */
+	public void deleteWhitespace() {
+		String string = "  hello world  ";
+		System.out.println("将 " + "  hello world  " + "的前后空格去掉" + string.trim());
+	}
+
+	/**
 	 * 判断是否以指定的字符串开头或者结尾
 	 */
 	public void tostartsWithOrendWith() {
@@ -134,6 +142,7 @@ public class StringDemo {
 		obj.tosubstring();
 		obj.tosplit();
 		obj.tochange();
+		obj.deleteWhitespace();
 		obj.tostartsWithOrendWith();
 		obj.toequals();
 		obj.toequalslgnoreCase();

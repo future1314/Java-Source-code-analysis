@@ -1,3 +1,4 @@
+Collections类的常见操作：
 排序操作
 Collections提供以下方法对List进行排序操作
 void reverse(List list)：反转
