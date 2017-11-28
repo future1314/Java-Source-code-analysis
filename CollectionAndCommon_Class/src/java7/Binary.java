@@ -20,6 +20,8 @@ public class Binary {
 		long m = 2_147_343_567L;//输出结果：2147343567
 		int n = 0b0001_1100_0111_0010_1011_0011;//输出结果：n1864371
 		System.out.println("m:" + m + "   " + "n" + n);
+		
+		
 	}
 
 }

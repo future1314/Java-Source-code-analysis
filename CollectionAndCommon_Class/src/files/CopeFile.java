@@ -1,4 +1,4 @@
-package file;
+package files;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 /**
- * TODO Files的copy()方法实现文件复制
+ * TODO Files的copy()方法实现文件和文件夹复制
  * 
  * @author 寇爽
  * @date 2017年11月28日
@@ -26,10 +26,10 @@ public class CopeFile {
 
 			Files.createFile(newFile);
 			System.out.println("File created successfully!");
-
+			// 文件复制
 			Files.copy(newFile, copiedFile, StandardCopyOption.REPLACE_EXISTING);
 			System.out.println("File copied successfully!");
-
+			// 文件夹复制
 			Files.copy(originalDirectory, newDirectory);
 			System.out.println("Directory copied successfully!");
 
