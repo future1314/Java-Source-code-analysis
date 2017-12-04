@@ -12,7 +12,7 @@ public class MoveFile {
 
 		try {
 
-			Path sourceFile = Paths.get("D:/home/projects/note.txt");
+			Path sourceFile = Paths.get("D:/home/sample/projects/note.txt");
 			Path destinationFile = Paths.get("D:/home/sample/note.txt");
 			Files.move(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING);
 

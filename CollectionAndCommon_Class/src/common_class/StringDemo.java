@@ -2,7 +2,7 @@ package common_class;
 
 public class StringDemo {
 	private String str = "helloWorld";
-
+	static  int x;
 	/**
 	 * 将字符串变成一个字符数组
 	 */
@@ -85,6 +85,7 @@ public class StringDemo {
 	 * 删除首部和尾部空格
 	 */
 	public void deleteWhitespace() {
+
 		String string = "  hello world  ";
 		System.out.println("将 " + "  hello world  " + "的前后空格去掉" + string.trim());
 	}
@@ -147,5 +148,6 @@ public class StringDemo {
 		obj.toequals();
 		obj.toequalslgnoreCase();
 		obj.toreplaceAll();
+		System.out.println(obj.x);
 	}
 }

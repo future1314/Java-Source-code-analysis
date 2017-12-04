@@ -27,7 +27,7 @@ public class MethodDemo {
 		// 并集
 		// list1.addAll(list2);
 		// 交集
-		// list1.retainAll(list2);
+		//list1.retainAll(list2);
 		// 差集
 		// list1.removeAll(list2);
 		// 无重复并集

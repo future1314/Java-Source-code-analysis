@@ -71,5 +71,13 @@ public class MathDemo {
 		System.out.println(Math.round(-10.51)); // -11
 		System.out.println(Math.round(-10.6)); // -11
 		System.out.println(Math.round(-10.2)); // -10
+		
+		/**
+		 * 产生随机数
+		 */
+		double x=Math.random();
+		int y=(int) (Math.random()*100);
+		System.out.println("随机数x:"+x);
+		System.out.println("随机数y:"+y);
 	}
 }
