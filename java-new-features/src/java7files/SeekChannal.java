@@ -1,4 +1,4 @@
-package files;
+package java7files;
 
 import java.io.BufferedReader;
 import java.io.File;

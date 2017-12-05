@@ -1,4 +1,4 @@
-package path;
+package java7path;
 
 import java.io.IOException;
 import java.nio.file.Files;

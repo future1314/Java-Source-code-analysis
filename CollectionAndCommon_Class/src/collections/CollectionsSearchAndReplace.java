@@ -6,7 +6,7 @@ import java.util.Collections;
 public class CollectionsSearchAndReplace {
 	/**
 	 * TODO Collections类方法测试之查找，替换操作
-	 * 
+	 * 该类包含对集合操作的各种方法
 	 * @author 寇爽
 	 * @date 2017年11月20日
 	 * @version 1.8

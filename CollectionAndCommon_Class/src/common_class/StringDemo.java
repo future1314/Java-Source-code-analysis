@@ -29,23 +29,6 @@ public class StringDemo {
 		System.out.println("转换成byte数组输出为：" + new String(b));
 	}
 
-	/**
-	 * 取得一个字符串的长度
-	 */
-	public void tolength() {
-		int l = str.length();
-		System.out.println("这个字符串的长度为：" + l);
-	}
-
-	/**
-	 * 查找一个指定的字符串是否存在，返回的是字符串的位置，如果不存在，则返回-1
-	 */
-	public void toindexOf() {
-		int a1 = str.indexOf("e");// 查找字符e的位置
-		int a2 = str.indexOf("l", 2);// 查找l的位置，从第3个开始查找
-		System.out.println("e的位置为:" + a1);
-		System.out.println("l的位置为:" + a2);
-	}
 
 	/**
 	 * 去掉字符串左右空格
@@ -73,13 +56,6 @@ public class StringDemo {
 		}
 	}
 
-	/**
-	 * 将字符串进行大小写转换
-	 */
-	public void tochange() {
-		System.out.println("将\"hello\"转换成大写为：" + str.toUpperCase());// 将hello转换成大写
-		System.out.println("将\"HELLO\"转换成大写为：" + str.toUpperCase().toLowerCase());// 将HELLO转换成小写
-	}
 
 	/**
 	 * 删除首部和尾部空格
@@ -137,12 +113,9 @@ public class StringDemo {
 		obj.tocharyArry();
 		obj.tocharAt();
 		obj.tobyte();
-		obj.tolength();
-		obj.toindexOf();
 		obj.totrim();
 		obj.tosubstring();
 		obj.tosplit();
-		obj.tochange();
 		obj.deleteWhitespace();
 		obj.tostartsWithOrendWith();
 		obj.toequals();

@@ -1,4 +1,4 @@
-package files;
+package java7files;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;

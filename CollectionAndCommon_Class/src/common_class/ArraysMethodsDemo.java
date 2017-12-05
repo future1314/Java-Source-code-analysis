@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * TODO Arrays类方法测试
- * 
+ * 包含用于操作数组的各种方法（如排序和搜索）。 该类还包含一个静态工厂，可以将数组视为列表。 
+ * 如果指定的数组引用为空，则该类中的方法都抛出一个NullPointerException ，除非另有说明。 
  * @author 寇爽
  * @date 2017年11月20日
  * @version 1.8
