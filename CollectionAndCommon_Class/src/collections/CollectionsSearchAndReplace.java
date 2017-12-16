@@ -12,7 +12,6 @@ public class CollectionsSearchAndReplace {
 	 * @version 1.8
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		arrayList.add(-1);
 		arrayList.add(3);

@@ -41,12 +41,6 @@ public class MathDemo {
 		System.out.println(Math.max(0.0, -0.0)); // 0.0
 
 		/**
-		 * random 取得一个大于或者等于0.0小于不等于1.0的随机数
-		 */
-		System.out.println(Math.random());
-		System.out.println(Math.random());
-
-		/**
 		 * rint 四舍五入，返回double值 注意.5的时候会取偶数
 		 */
 		System.out.println(Math.rint(10.1)); // 10.0
@@ -73,7 +67,7 @@ public class MathDemo {
 		System.out.println(Math.round(-10.2)); // -10
 		
 		/**
-		 * 产生随机数
+		 * random 取得一个大于或者等于0.0小于不等于1.0的随机数
 		 */
 		double x=Math.random();
 		int y=(int) (Math.random()*100);
