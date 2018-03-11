@@ -44,10 +44,10 @@ public class CollectionsSearchAndReplace {
 		System.out.println("Collections.indexOfSubList(arrayList, arrayList2):");
 		System.out.println(Collections.indexOfSubList(arrayList, arrayList2));
 
-		System.out.println("Collections.binarySearch(arrayList, -9):");
+		System.out.println("Collections.binarySearch(arrayList, 7):");
 		// 对List进行二分查找，返回索引，List必须是有序的
 		Collections.sort(arrayList);
-		System.out.println(Collections.binarySearch(arrayList, -9));
+		System.out.println(Collections.binarySearch(arrayList, 7));
 	}
 
 }

@@ -1,5 +1,6 @@
 Collections类的常见操作：
 排序操作
+集合类库使用的是归并排序比快速排序要慢一些，快速排序是通用排序算法的传统选择。但是，归并排序有一个主要的优点就是稳定。
 Collections提供以下方法对List进行排序操作
 void reverse(List list)：反转
 void shuffle(List list),随机排序

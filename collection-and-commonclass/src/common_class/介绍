@@ -1,3 +1,5 @@
+该包下主要包含常用类：Arrays类，Calender类，Character类，Math类，Random类，String类的常用方法测试。
+
 Arrays工具类常用方法测试
 读 Java Arrays 源码 笔记 http://www.jianshu.com/p/d083332c3c29
     1，排序 sort

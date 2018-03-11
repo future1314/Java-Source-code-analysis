@@ -29,14 +29,11 @@ public class CollectionsSort {
 		Collections.reverse(arrayList);
 		System.out.println("Collections.reverse(arrayList):");
 		System.out.println(arrayList);
-/*		
-		 * void rotate(List list, int distance),旋转。
-		 * 当distance为正数时，将list后distance个元素整体移到前面。当distance为负数时，将
-		 * list的前distance个元素整体移到后面。
+		
 		 
 		Collections.rotate(arrayList, 4);
 		System.out.println("Collections.rotate(arrayList, 4):");
-		System.out.println(arrayList);*/
+		System.out.println(arrayList);
 		
 		// void sort(List list),按自然排序的升序排序
 		Collections.sort(arrayList);
